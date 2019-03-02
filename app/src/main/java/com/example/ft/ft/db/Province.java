@@ -1,4 +1,4 @@
-package db;
+package com.example.ft.ft.db;
 import org.litepal.crud.DataSupport;
         /*
         id 是每个实体类中都应该有的字段，
@@ -11,27 +11,27 @@ public class Province extends DataSupport {
     private int  provinceCode;
 
 
-    public int getProvinceCode() {
+    public int getprovinceCode() {
         return provinceCode;
     }
 
-    public void setProvinceCode(int provinceCode) {
+    public void setprovinceCode(int provinceCode) {
         this.provinceCode = provinceCode;
     }
 
-    public String getProvinceName() {
+    public String getprovinceName() {
         return provinceName;
     }
 
-    public void setProvinceName(String provinceName) {
+    public void setprovinceName(String provinceName) {
         this.provinceName = provinceName;
     }
 
-    public int getId() {
+    public int getid() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setid(int id) {
         this.id = id;
     }
 }

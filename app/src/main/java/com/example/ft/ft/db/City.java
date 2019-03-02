@@ -1,4 +1,4 @@
-package db;
+package com.example.ft.ft.db;
 
 import org.litepal.crud.DataSupport;
             /*
@@ -13,35 +13,35 @@ public class City extends DataSupport {
     private int provinceId;
 
 
-    public int getId() {
+    public int getid() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setid(int id) {
         this.id = id;
     }
 
-    public String getCityName() {
+    public String getcityName() {
         return cityName;
     }
 
-    public void setCityName(String cityName) {
+    public void setcityName(String cityName) {
         this.cityName = cityName;
     }
 
-    public int getCityCode() {
+    public int getcityCode() {
         return cityCode;
     }
 
-    public void setCityCode(int cityCode) {
+    public void setcityCode(int cityCode) {
         this.cityCode = cityCode;
     }
 
-    public int getProvinceId() {
+    public int getprovinceId() {
         return provinceId;
     }
 
-    public void setProvinceId(int provinceId) {
+    public void setprovinceId(int provinceId) {
         this.provinceId = provinceId;
     }
 }
