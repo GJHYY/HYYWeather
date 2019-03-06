@@ -1,6 +1,7 @@
 package com.example.ft.ft.util;
 
 import android.text.TextUtils;
+import android.util.JsonReader;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -9,6 +10,8 @@ import org.json.JSONObject;
 import com.example.ft.ft.db.City;
 import com.example.ft.ft.db.Country;
 import com.example.ft.ft.db.Province;
+import com.example.ft.ft.gson.Weather;
+import com.google.gson.Gson;
 
 public class Utility {
     /*
@@ -75,5 +78,19 @@ public class Utility {
             }
         }
         return false;
+    }
+
+
+    public static Weather handleWeatherResponse(String response){
+        try {
+            JSONObject jsonObject=new JSONObject(response);
+            JSONArray jsonArray=jsonObject.getJSONArray("HeWeather");
+            String weatherContent=jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent,Weather.class);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 }
